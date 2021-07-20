@@ -11,25 +11,31 @@
           null,
           1,
           null,
-          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
           null,
           1,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
-          4,
-          4,
+          0,
           null,
-          4,
-          4,
+          0,
           null,
-          4,
-          4,
-          null,
-          4,
-          4,
-          null,
+          0,
           null,
           null,
           null
@@ -314,7 +320,7 @@
         "lines": [
           1,
           1,
-          5,
+          51,
           null,
           null
         ]
@@ -349,6 +355,11 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -356,10 +367,19 @@
       "/Users/konham/turing/mod3/rails-engine/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/konham/turing/mod3/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1626738410
+    "timestamp": 1626749702
   }
 }

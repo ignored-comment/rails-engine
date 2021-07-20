@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "Books API" do
-    it "gets a list of merchants" do
-        create_list(:merchant, 4)
+describe "Merchants API" do
+    it "gets a list of all merchants" do
+        create_list(:merchant, 50)
 
         get '/api/v1/merchants'
 
@@ -10,21 +10,27 @@ describe "Books API" do
 
         merchants = JSON.parse(response.body, symbolize_names: true)
 
-        expect(merchants.count).to eq(4)
+        expect(merchants[:data].count).to eq(20)
 
-        merchants.each do |merchant|
+        merchants[:data].each do |merchant|
             expect(merchant).to have_key(:id)
-            expect(merchant[:id]).to be_an(Integer)
+            expect(merchant[:id]).to be_an(String)
 
-            expect(merchant).to have_key(:name)
-            expect(merchant[:name]).to be_a(String)
-
-            expect(merchant).to have_key(:created_at)
-            expect(merchant[:name]).to be_a(String)
-
-            expect(merchant).to have_key(:updated_at)
-            expect(merchant[:name]).to be_a(String)
+            expect(merchant[:attributes]).to have_key(:name)
+            expect(merchant[:attributes][:name]).to be_a(String)
         end
+    end
+
+    it 'returns a list of merchants limited to 20 per page' do
+        create_list(:merchant, 40)
+
+        get '/api/v1/merchants'
+
+        expect(response).to be_successful
+
+        merchants = JSON.parse(response.body, symbolize_names: true)
+
+        expect(merchants[:data].count).to eq(20)
     end
 end
 
