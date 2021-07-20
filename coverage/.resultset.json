@@ -1,59 +1,24 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/konham/turing/mod3/rails-engine/spec/requests/api/v1/merchants_request_spec.rb": {
+      "/Users/konham/turing/mod3/rails-engine/spec/requests/api/v1/merchants_item_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          20,
-          20,
-          null,
-          20,
-          20,
-          null,
-          null,
-          null,
           1,
           1,
           null,
           1,
+          0,
+          0,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
+          0,
           null,
           null,
           null
@@ -334,11 +299,23 @@
           null
         ]
       },
+      "/Users/konham/turing/mod3/rails-engine/spec/factories/items.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/konham/turing/mod3/rails-engine/spec/factories/merchants.rb": {
         "lines": [
           1,
           1,
-          92,
+          94,
           null,
           null
         ]
@@ -348,6 +325,66 @@
           1,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/konham/turing/mod3/rails-engine/spec/requests/api/v1/merchants_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          20,
+          20,
+          null,
+          20,
+          20,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
           1,
           1,
           null,
@@ -365,6 +402,13 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/konham/turing/mod3/rails-engine/app/models/item.rb": {
+        "lines": [
+          1,
+          null,
           null
         ]
       },
@@ -402,6 +446,6 @@
         ]
       }
     },
-    "timestamp": 1626750935
+    "timestamp": 1626754806
   }
 }
