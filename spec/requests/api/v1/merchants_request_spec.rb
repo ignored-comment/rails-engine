@@ -33,6 +33,8 @@ describe "Merchants API" do
         expect(merchants[:data].count).to eq(20)
     end
 
+    # need to develop another test for pg2 of search results
+
     it 'can get a single merchant' do
         id = create(:merchant).id
 
