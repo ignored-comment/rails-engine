@@ -25,6 +25,11 @@ class Api::V1::ItemsController < ApplicationController
         render json: Item.delete(params[:id])
     end
 
+    def update
+        @item = Item.update(params[:id], item_params)
+        render json: ItemSerializer.new(@item)
+    end
+
     def item_params
         params.require(:item).permit(:name, :description, :unit_price, :merchant_id)
     end
