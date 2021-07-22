@@ -10,7 +10,7 @@ RSpec.describe 'Merchant Items Spec' do
             item2 = create(:item, merchant: merchant1)
             item3 = create(:item, merchant: merchant1)
             item4 = create(:item, merchant: merchant2)
-
+            
             get "/api/v1/merchants/#{merchant1.id}/items"
 
             expect(response).to be_successful

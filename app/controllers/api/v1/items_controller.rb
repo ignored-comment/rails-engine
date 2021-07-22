@@ -27,6 +27,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def update
         @item = Item.update(params[:id], item_params)
+        render :json => {:error =>  "Record Not Found"}.to_json, :status => 404 if !Merchant.find(@item.merchant_id)
         render json: ItemSerializer.new(@item)
     end
 
