@@ -13,10 +13,3 @@ RSpec.describe 'Items Merchant' do
         expect(response).to be_successful
     end
 end
-#       merchant = JSON.parse(response.body, symbolize_names: true)
-#       expect(merchant[:data]).to be_a Hash
-#       expect(merchant[:data][:id].to_i).to eq(merchant2.id)
-#       expect(merchant[:data][:attributes][:name]).to eq(merchant2.name)
-#     end
-#   end
-# end
