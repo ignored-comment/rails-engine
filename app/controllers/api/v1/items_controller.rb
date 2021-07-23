@@ -31,6 +31,11 @@ class Api::V1::ItemsController < ApplicationController
         render json: ItemSerializer.new(@item)
     end
 
+    def find
+        @items = Item.where("name ilike ?", "%#{params[:name]}%").order(:name)
+        render json: ItemSerializer.new(@items)
+    end
+
     def item_params
         params.require(:item).permit(:name, :description, :unit_price, :merchant_id)
     end

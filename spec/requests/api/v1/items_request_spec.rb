@@ -112,4 +112,23 @@ describe 'Items API', type: :request do
         expect(item.description).to_not eq(previous_description)
         expect(item.description).to eq("hmmmmm")
     end
+
+    it 'can find all items based on search' do
+        merchant = create(:merchant)
+        item1 = merchant.items.create!(name: "Bobblehead #1", description: "Bobbles Real Good", unit_price: 50.01)
+        item2 = merchant.items.create!(name: "Bobblehead #2", description: "Bobbles Real Good", unit_price: 50.02)
+        item3 = merchant.items.create!(name: "Bobblehead #3", description: "Bobbles Real Good", unit_price: 50.03)
+        item4 = merchant.items.create!(name: "Bobblehead #4", description: "Bobbles Real Good", unit_price: 50.04)
+        item5 = merchant.items.create!(name: "Bobblehead #5", description: "Bobbles Real Good", unit_price: 50.05)
+        item1 = merchant.items.create!(name: "FRANKS FILTHY FIRECRACKERS", description: "IT GOES BANG REAL LOUD", unit_price: 2.99)
+
+        search = "Bobblehead"
+
+        get "/api/v1/items/find_all?name=#{search}"
+
+        expect(response).to be_successful
+
+        items = JSON.parse(response.body, symbolize_names: true)
+        expect(items[:data].count).to eq(5)
+    end
 end
