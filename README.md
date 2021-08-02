@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+I got a lot of help with this project - my spiritual mentor can be located here:
+
+https://github.com/gaelyn
+
+Please consider giving her a visit. She is a great developer. 
